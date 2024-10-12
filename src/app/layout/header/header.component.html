@@ -1,1 +1,80 @@
-<h1>This is my first component in angulaar</h1>
+<header class="bg-[#ffffff0a]">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 font-bold p-1.5">Demo</a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" >
+            @for(menu of menuData; track menu.menu){
+                @if(menu.menu === 'product'){
+                    <div class="relative" (mouseover)="onProductHover()" >
+                        <a href="#" class="font-semibold leading-6 text-white">{{menu.label}}</a>
+                    
+                            <div [class]="isProductHover() ? 'block' : 'hidden'" class="absolute top-4 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" (mouseout)="onProductOut()">
+                                <div class="p-4">
+                                    <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                        <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                                            </svg>
+                                        </div>
+                                        <div class="flex-auto">
+                                            <a href="#" class="block font-semibold text-gray-900">
+                                                Shared Inbox
+                                                <span class="absolute inset-0"></span>
+                                            </a>
+                                            <p class="mt-1 text-gray-600">Access and manage all customer requests from a single platform</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                }@else{
+                    <a href="#" class="font-semibold leading-6 text-white">{{menu.label}}</a>
+                }
+            }
+            
+        </div>
+        <div class="hidden lg:flex lg:flex-1 items-center lg:justify-end">
+            <app-button [btnData]="{id:1, name:'Log In', className:'btn mr-3'}">Log In</app-button>
+            <app-button [btnData]="{id:2, name:'Sign Up', className:'btn-transparent-dark'}">Sign Up</app-button>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-10"></div>
+      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 font-bold p-1.5">Demo</a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6 flex flex-col">
+                @for(menu of menuData; track menu.menu){
+                    <a href="#" class="font-semibold leading-6 text-white">{{menu.label}}</a>
+                }
+            </div>
+            <div class="py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
