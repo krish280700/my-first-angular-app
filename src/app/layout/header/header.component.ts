@@ -1,4 +1,4 @@
-import { Component, input, signal } from "@angular/core";
+import { Component, ElementRef, HostListener, signal, ViewChild } from "@angular/core";
 import { menuData } from "../../mock/header";
 import { ButtonComponent } from "../../baseComponents/button/button.component";
 @Component({
@@ -11,6 +11,8 @@ import { ButtonComponent } from "../../baseComponents/button/button.component";
 export class HeaderComponent{
     isProductHover = signal<boolean>(false)
     menuData = menuData
+    // @ViewChild('header') headerContainer!: ElementRef
+    // @HostListener('document:scroll', ['$event'])
 
     onProductHover(){
         const productHovered = this.isProductHover()
@@ -20,4 +22,8 @@ export class HeaderComponent{
     onProductOut(){
         this.isProductHover.set(false)
     }
+
+    // onMouseScroll(e){
+    //     console.log(e, 'event')
+    // }
 }

@@ -12,7 +12,6 @@ import { MasterComponent } from './layout/master/master.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'my-first-angular-app';
 
   @ViewChild('movemouse') mousecursor!: ElementRef;
   @HostListener('document:mousemove', ['$event']) 

@@ -1,0 +1,78 @@
+<section class="hero-section">
+    <div class="lg:grid grid-cols-2  items-center justify-center">
+        <div class="hero-container  pr-10`">
+            <div class="hero-header">
+                <p class="leading-10">
+                    <span class="text-7xl font-serif">Simplify Your Communication</span>
+                    <span class="text-2xl block"> Manage Emails & DMs in One Place</span>
+                    <span class="text-xl">with AI-Powered Responses</span>
+                </p>
+                <h1 class="text-6xl font-serif"></h1>
+                <h2 class="text-5xl"> </h2>
+                <h3 class="text-4xl"></h3>
+            </div>
+            <p class="hero-content mt-10 lg:pr-5">Streamline customer interactions across platforms with Omnichat – your unified inbox with AI-powered efficiency.</p>
+            <div class="hero-action flex space-x-4 mt-4">
+                <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
+                <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient'}"></app-button>
+            </div>
+        </div>
+        <div class="support-hero-content">
+            <div class="transition-all">
+                <figure>
+                    <img src="assets/images/Untitled.png" />
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="problem-statement lg:mt-24">
+    <div class="flex flex-col justify-center items-center ">
+        <h3 class=" text-3xl font-semibold text-center">Your Customers Are Everywhere<br>Your Responses Aren’t</h3>
+        <div class="h-1 w-20 mt-2 bg-black"></div>
+    </div>
+    <div class="lg:mt-16">
+        <p class="text-3xl font-bold text-center leading-[3rem] opacity-70">As a business owner, managing customer communication is crucial for maintaining relationships and driving growth. But with the rise of digital platforms, handling messages across various channels has become overwhelming.</p>
+        <div class="grid grid-cols-2 items-center mt-20 ">
+            <div class="lg:w-11/12">
+                <app-carousel section="problem" [content]="problemContent"></app-carousel>
+            </div>
+            <div>
+                <figure>
+                    <img src="assets/images/problem.png" />
+                </figure>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="solution-statement lg:mt-24">
+    <div class="flex flex-col justify-center items-center ">
+        <h3 class="text-center text-3xl font-semibold">Omnichat: All Your Communications<br> in One Place</h3>
+        <div class="h-1 w-20 mt-2 bg-black"></div>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
+        @for(solution of solutionContent; track solution.header){
+            <app-card [cardData]="solution"></app-card>
+        }
+    </div>
+
+</section>
+
+<section class="testimonials lg:mt-24">
+    <div class="flex flex-col justify-center items-center ">
+        <h3 class="text-center text-3xl font-semibold">Loved by Business Owners<br> Worldwide</h3>
+        <div class="h-1 w-20 mt-2 bg-black"></div>
+    </div>
+    <div class="mt-20 ">
+        <app-carousel section="testimonials" [content]="testimonials"></app-carousel>
+    </div>
+    <!-- <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
+        @for(solution of solutionContent; track solution.header){
+            <app-card [cardData]="solution"></app-card>
+        }
+    </div> -->
+
+</section>

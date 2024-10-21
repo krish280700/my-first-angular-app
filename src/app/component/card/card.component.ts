@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+
+interface Card{
+  header?: string,
+  body: string | any[],
+  footer?: string | any[],
+}
 
 @Component({
   selector: 'app-card',
@@ -8,5 +14,5 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+  cardData = input<Card>()
 }
