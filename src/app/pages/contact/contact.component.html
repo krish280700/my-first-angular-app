@@ -1,1 +1,16 @@
-<p>contact works!</p>
+<section id="contact">
+    <div class="text-center lg:mt-24">
+        <h3 class="text-5xl font-semibold">Contact</h3>
+        <p class="text-2xl mt-2">Get in touch with our sales or support teams <br> to learn more about Omnichat.</p>
+    </div>
+
+    <div class="flex items-center justify-center w-[28rem] shadow-2xl rounded-lg mx-auto mt-16 px-5 py-10">
+            <form class="flex w-full flex-col gap-4">
+                @for(input of inputFields; track input.id){
+                    <app-input [fieldData]="input"></app-input> 
+                }
+
+                <app-button [btnData]="{id:1, name:'Send', className:'mt-2 w-full btn mr-3'}"></app-button>
+            </form>
+    </div>
+</section>

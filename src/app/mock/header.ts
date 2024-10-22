@@ -111,3 +111,30 @@ export const testimonials = [
         img: "assets/images/testimonial.png"
     },
 ]
+
+export const inputFields = [
+    {
+        id: 1,
+        fieldId: 'message',
+        type: 'textarea',
+        placeholder: 'Message',
+        value: '',
+        class: 'h-28 text-wrap'
+    },
+    {
+        id: 1,
+        fieldId: 'name',
+        type: 'text',
+        placeholder: 'Name',
+        value: '',
+        class: ''
+    },
+    {
+        id: 1,
+        fieldId: 'email',
+        type: 'email',
+        placeholder: 'Email',
+        value: '',
+        class: ''
+    },
+]

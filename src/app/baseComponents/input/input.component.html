@@ -1,0 +1,7 @@
+@switch (fieldData()?.type) {
+    @case ("textarea") {
+        <textarea [class]="fieldData()?.class" class="border p-4 py-2 w-full bg-transparent rounded text-white" [placeholder]="fieldData()?.placeholder"></textarea>
+    }@default {
+        <input [class]="fieldData()?.class" class="border p-4 py-2 w-full bg-transparent rounded text-white" [type]="fieldData()?.type" [placeholder]="fieldData()?.placeholder"> 
+    }
+}
