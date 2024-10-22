@@ -60,11 +60,13 @@
     }
 }
 
+.btn-white{
+    @extend .btn;
+    background: #ffffff;
+    color: #09203F;
+}
 .btn-gradient{
     @extend .btn;
     background: linear-gradient(to right top, #cb1e1e, #d91c3d, #e2245b, #e73479, #e84696, #e243a4, #d843b3, #cb46c2, #b536c9, #9929d1, #7224da, #2326e4);
     border: 2px solid #b73333;
-    &:hover {
-        box-shadow: 5px 5px 5px #7a38d1;
-    }
 }

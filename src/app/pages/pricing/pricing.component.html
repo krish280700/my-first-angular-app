@@ -1,1 +1,77 @@
-<p>pricing works!</p>
+<section id="pricing">
+    <div class="text-center lg:mt-24">
+        <h3 class="text-5xl font-semibold">Pricing</h3>
+        <p class="text-2xl mt-2">Transparent pricing that's clear and concise. <br> No hidden fees or unexpected charges.</p>
+    </div>
+
+    <div class="pricing-options mt-20">
+        <div class="grid lg:grid-cols-4 border rounded-lg shadow-2xl">
+            @for(pricing of pricingData; track pricing){
+                <div class="border-r last:border-none">
+                    <div class="flex flex-col justify-center border-b px-6 py-10 items-center">
+                        <h3 class="text-3xl font-semibold">{{pricing.type}}</h3>
+                        <h4 class="text-xl mt-2">{{pricing.pricePerMonth}}</h4>
+                        <p class="bg-white rounded px-4 mt-2 text-black py-2">100 AI Replies</p>
+                        <p class="mt-2 text-center">{{pricing.desc}}</p>
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="my-4">
+                            <h4 class="text-xl font-medium">Features</h4>
+                            <ul class="mt-4">
+                                @for(feat of pricing.features; track feat){
+                                    <li class="flex my-1 items-center">
+                                        <ng-icon class="text-xl" name="ionCheckmarkSharp"></ng-icon>
+                                        <p class="ml-2">{{feat}}</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="my-4">
+                            <h4 class="text-xl font-medium">AI</h4>
+                            <ul class="mt-4">
+                                @for(feat of pricing.ai; track feat){
+                                    <li class="flex my-1 items-center">
+                                        <ng-icon class="text-xl" name="ionCheckmarkSharp"></ng-icon>
+                                        <p class="ml-2">{{feat}}</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="my-4">
+                            <h4 class="text-xl font-medium">Support</h4>
+                            <ul class="mt-4">
+                                @for(feat of pricing.support; track feat){
+                                    <li class="flex my-1 items-center">
+                                        <ng-icon class="text-xl" name="ionCheckmarkSharp"></ng-icon>
+                                        <p class="ml-2">{{feat}}</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-center py-8 border-t">
+                        <app-button [btnData]="{id:1, name:'Try for free', className:'btn-white text-black'}"></app-button>
+                        <p class="text-sm mt-1">(No credit card required)</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="pricindFaq mt-20">
+        <h3 class="text-3xl font-semibold text-center">Pricing FAQ</h3>
+        <div class="mt-10 border-transparent rounded-2xl shadow-2xl p-6">
+            <app-accordion [accordionData]="pricingFaq"></app-accordion>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials lg:mt-24">
+    <div class="flex flex-col justify-center items-center ">
+        <h3 class="text-center text-3xl font-semibold">Loved by Business Owners<br> Worldwide</h3>
+        <div class="h-1 w-20 mt-2 bg-black"></div>
+    </div>
+    <div class="mt-20 border-transparent rounded-2xl shadow-2xl px-14 py-4">
+        <app-carousel section="testimonials" [content]="testimonials"></app-carousel>
+    </div>
+</section>

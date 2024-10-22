@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../../component/card/card.component';
 import { ButtonComponent } from "../../baseComponents/button/button.component";
 import { CarouselComponent } from '../../component/carousel/carousel.component';
-
+import { testimonials } from '../../mock/header';
 @Component({
 	selector: 'app-product',
 	standalone: true,
@@ -11,6 +11,7 @@ import { CarouselComponent } from '../../component/carousel/carousel.component';
 	styleUrl: './product.component.scss'
 })
 export class ProductComponent {
+	testimonials = testimonials
 	problemContent = [
 		{
 			header: 'Scattered Conversations',
@@ -51,30 +52,6 @@ export class ProductComponent {
 			body:[
 				'Set up automated replies for frequently asked questions, such as business hours, return policies, or shipping information. The AI can instantly send accurate answers to routine queries, allowing you to focus on more critical tasks that require personal attention.'
 			]
-		},
-	]
-
-	testimonials = [
-		{
-			name: "krish",
-			about: "CEO, Krish Inc.,",
-			feedback: "Omnichat helped me save hours every week by centralizing all my customer interactions. The AI responses are a game-changer!",
-			video: "assets/videos/testimonial.mp4",
-			img: "assets/images/testimonial.png"
-		},
-		{
-			name: "krish",
-			about: "CEO, Krish Inc.,",
-			feedback: "Omnichat helped me save hours every week by centralizing all my customer interactions. The AI responses are a game-changer!",
-			video: "assets/videos/testimonial.mp4",
-			img: "assets/images/testimonial.png"
-		},
-		{
-			name: "krish",
-			about: "CEO, Krish Inc.,",
-			feedback: "Omnichat helped me save hours every week by centralizing all my customer interactions. The AI responses are a game-changer!",
-			video: "assets/videos/testimonial.mp4",
-			img: "assets/images/testimonial.png"
 		},
 	]
 }

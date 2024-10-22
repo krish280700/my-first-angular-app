@@ -1,21 +1,3 @@
-
-
-<!-- <div id="default-carousel" class="relative w-full" data-carousel="slide">
-    <div class="relative overflow-hidden">
-        @for(data of content(); track data.header; let index = $index){
-            <div #carouselItem [class]="index == 0 ? '' : 'hidden'" class="supports-[display:block]:animate-fadeinright">
-                <div class=" flex flex-col justify-center h-full" data-carousel-item>
-                    <h3 class="text-2xl font-bold underline">{{data.header}}</h3>
-                    <div class="mt-5">
-                        <p class="text-lg">{{data.content1}}</p>
-                        <p class="text-lg mt-4">{{data.content2}}</p>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-</div> -->
-
 <div>
     <ngx-slick-carousel class="carousel" 
                         #slickModal="slick-carousel" 
@@ -36,7 +18,7 @@
         @else if(section() == "testimonials"){
             @for (slide of content(); track slide.header) {
                 <div ngxSlickItem class="slide">
-                    <div class="border-2 rounded-lg shadow-2xl p-4" data-carousel-item>
+                    <div class="p-4" data-carousel-item>
                         <div class="flex items-center justify-center" >
                             <figure>
                                 <img class="w-[400px] h-[500px] rounded-xl" [src]="slide.img" >
