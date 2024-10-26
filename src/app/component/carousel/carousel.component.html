@@ -16,14 +16,14 @@
             }
         }
         @else if(section() == "testimonials"){
-            @for (slide of content(); track slide.header) {
+            @for (slide of content(); track slide.name) {
                 <div ngxSlickItem class="slide">
                     <div class="p-4" data-carousel-item>
-                        <div class="flex items-center justify-center" >
-                            <figure>
-                                <img class="w-[400px] h-[500px] rounded-xl" [src]="slide.img" >
+                        <div class="grid md:grid-cols-3 " >
+                            <figure class="md:col-span-1">
+                                <img class="rounded-xl" [src]="slide.img" >
                             </figure>
-                            <div class="ml-8">
+                            <div class="ml-8 md:col-span-2">
                                 <h3 class="name text-2xl font-bold">{{slide.name}}</h3>
                                 <p>{{slide.about}}</p>
     

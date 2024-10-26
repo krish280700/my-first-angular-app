@@ -11,20 +11,20 @@ import { RouterLink } from "@angular/router";
 
 export class HeaderComponent{
     isProductHover = signal<boolean>(false)
+    isSticky = signal<boolean>(true)
+    isHamBurgerVisible = window.innerWidth < 1020
+    isToggle = signal<boolean>(false)
+
     menuData = menuData
-    // @ViewChild('header') headerContainer!: ElementRef
-    // @HostListener('document:scroll', ['$event'])
-
-    onProductHover(){
-        const productHovered = this.isProductHover()
-        this.isProductHover.set(true)
+    
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+        // Add sticky class after scrolling 100px
+        this.isSticky.set(window.pageYOffset > 50)
     }
 
-    onProductOut(){
-        this.isProductHover.set(false)
+    toggleHamBurger(){
+        this.isToggle.set(!this.isToggle())
     }
-
-    // onMouseScroll(e){
-    //     console.log(e, 'event')
-    // }
+    
 }

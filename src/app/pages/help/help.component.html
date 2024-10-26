@@ -1,1 +1,33 @@
-<p>help works!</p>
+<section id="help">
+    <div class="lg:mt-24 px-10 mx-auto max-w-7xl">
+        <h3 class="text-5xl font-semibold">Help Center</h3>
+        <p class="text-2xl mt-2">Explore for helpful articles on how to make the most of Omnichat.</p>
+    </div>
+
+    <div class="bg-white md:px-20 lg:px-36 mt-10 ">
+        <div class="grid lg:grid-cols-4 min-h-[800px] py-4">
+            <div class="lg:col-span-1 lg:border-r px-4">
+                <ul class="flex flex-wrap space-x-2 lg:space-x-0 lg:block">
+                    @for(helpMenu of helpArticlesTag; track $index){
+                        <li (click)="updateActiveMenu(helpMenu.id)" class="text-black p-2 shadow rounded border my-2 cursor-pointer" [class]="activeMenu() === helpMenu.id ? 'bg-slate-200' : ''">{{helpMenu.label}}</li>
+                    }
+                </ul>
+            </div>
+            <div class="col-span-3">
+                <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4 p-6">
+                    @for(article of articles; track $index){
+                        @for(tags of article.tags; track $index){
+                            @if(tags.id == activeMenu()){
+                                <div class="text-black border rounded-lg shadow-lg px-2 py-4">
+                                    <h3 class="text-black text-xl">{{article.title}}</h3>
+                                    <p class="text-black">{{article.preview}}</p>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
