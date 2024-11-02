@@ -6,6 +6,7 @@ import { RouterLink } from "@angular/router";
     selector:'app-header',
     standalone: true,
     templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
     imports:[ButtonComponent, RouterLink]
 })
 
@@ -14,7 +15,7 @@ export class HeaderComponent{
     isSticky = signal<boolean>(true)
     isHamBurgerVisible = window.innerWidth < 1020
     isToggle = signal<boolean>(false)
-
+    activetab = signal<string>('product')
     menuData = menuData
     
     @HostListener('window:scroll', [])
@@ -25,6 +26,10 @@ export class HeaderComponent{
 
     toggleHamBurger(){
         this.isToggle.set(!this.isToggle())
+    }
+
+    setAvtiveTab(tab: string){
+        this.activetab.set(tab)
     }
     
 }
