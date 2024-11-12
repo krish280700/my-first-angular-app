@@ -122,7 +122,7 @@ export const inputFields = [
         class: 'h-28 text-wrap'
     },
     {
-        id: 1,
+        id: 2,
         fieldId: 'name',
         type: 'text',
         placeholder: 'Name',
@@ -130,7 +130,7 @@ export const inputFields = [
         class: ''
     },
     {
-        id: 1,
+        id: 3,
         fieldId: 'email',
         type: 'email',
         placeholder: 'Email',

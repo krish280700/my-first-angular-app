@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+    @for(input of inputDatas; track input.id){
+        @switch (input?.type) {
+            @case ("textarea") {
+                <textarea [class]="input?.class" [name]="input.fieldId" class="border p-4 py-2 w-full bg-transparent rounded text-white" [placeholder]="input?.placeholder" ngModel></textarea>
+            }@default {
+                <input [class]="input?.class" [name]="input.fieldId" class="border p-4 py-2 mt-1 w-full bg-transparent rounded text-white" [type]="input?.type" [placeholder]="input?.placeholder" ngModel> 
+            }
+        }
+    }
+
+    <app-button [btnData]="{id:1, name:'Send', className:'mt-2 w-full btn mr-3'}"></app-button>
+</form>

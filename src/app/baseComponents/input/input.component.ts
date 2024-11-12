@@ -3,7 +3,6 @@ import { Component, input } from '@angular/core';
 interface Input{
 	type: string,
 	id: number,
-	fieldId: string,
 	placeholder: string,
 	value: any,
 	class: string,
@@ -18,4 +17,5 @@ interface Input{
 })
 export class InputComponent {
 	fieldData = input<Input>()
+	formControlName=input()
 }
