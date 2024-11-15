@@ -30,6 +30,7 @@ export class HeaderComponent{
 
     setAvtiveTab(tab: string){
         this.activetab.set(tab)
+        this.isToggle.set(false)
     }
     
 }

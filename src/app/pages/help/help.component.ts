@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { helpArticlesTag, articles } from '../../mock/header';
+import { RouterLink, RouterOutlet } from "@angular/router";
 @Component({
 	selector: 'app-help',
 	standalone: true,
-	imports: [],
+	imports: [RouterLink,RouterOutlet],
 	templateUrl: './help.component.html',
 	styleUrl: './help.component.scss'
 })

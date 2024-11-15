@@ -5,7 +5,7 @@
     </div>
 
     <div class="bg-white md:px-20 lg:px-36 mt-10 ">
-        <div class="grid lg:grid-cols-4 min-h-[800px] py-4">
+        <div class="grid lg:grid-cols-4 lg:min-h-[800px] py-4">
             <div class="lg:col-span-1 lg:border-r px-4">
                 <ul class="flex flex-wrap space-x-2 lg:space-x-0 lg:block">
                     @for(helpMenu of helpArticlesTag; track $index){
@@ -23,12 +23,15 @@
                                     <h3 class="text-black text-xl">{{article.title}}</h3>
                                     <p class="text-black">{{article.preview}}</p>
 
-                                    <p class="text-black mt-2">Read More -></p>
+                                    <a [routerLink]="['article', 1]" class="text-black mt-2">Read More -></a>
                                 </div>
                             }
                         }
                     }
                 </div>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
