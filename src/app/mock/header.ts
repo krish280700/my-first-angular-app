@@ -201,7 +201,7 @@ export const articles = [
         ]
     },
     {
-        id:1,
+        id:2,
         title: 'Connecting Your Google Inbox',
         preview: 'If you are using a single user email address (meaning that your email address is...',
         tags:[
@@ -218,7 +218,7 @@ export const articles = [
         ]
     },
     {
-        id:1,
+        id:3,
         title: 'Connecting Your Google Inbox',
         preview: 'If you are using a single user email address (meaning that your email address is...',
         tags:[
@@ -235,7 +235,7 @@ export const articles = [
         ]
     },
     {
-        id:1,
+        id:4,
         title: 'Connecting Your Google Inbox',
         preview: 'If you are using a single user email address (meaning that your email address is...',
         tags:[

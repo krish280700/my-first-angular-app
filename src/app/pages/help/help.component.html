@@ -1,7 +1,7 @@
 <section id="help">
     <div class="lg:mt-24 px-10 mx-auto max-w-7xl">
         <h3 class="text-5xl font-semibold">Help Center</h3>
-        <p class="text-2xl mt-2">Explore for helpful articles on how to make the most of Omnichat.</p>
+        <p class="text-2xl mt-2">Explore for helpful articles on how to make the most of AIFS.</p>
     </div>
 
     <div class="bg-white md:px-20 lg:px-36 mt-10 ">
@@ -9,29 +9,36 @@
             <div class="lg:col-span-1 lg:border-r px-4">
                 <ul class="flex flex-wrap space-x-2 lg:space-x-0 lg:block">
                     @for(helpMenu of helpArticlesTag; track $index){
-                        <li (click)="updateActiveMenu(helpMenu.id)" class="text-black p-2 shadow rounded border my-2 cursor-pointer" [class]="activeMenu() === helpMenu.id ? 'bg-slate-200' : ''">{{helpMenu.label}}</li>
+                        <li (click)="updateActiveMenu(helpMenu.id, helpMenu.label)" class="text-black p-2 shadow rounded border my-2 cursor-pointer" [class]="activeMenuId() === helpMenu.id ? 'bg-slate-200' : ''">{{helpMenu.label}}</li>
                     }
                 </ul>
             </div>
-            <div class="col-span-3  p-6">
-                <p class="text-black mb-4">Getting started/ksksk</p>
-                <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4">
-                    @for(article of articles; track $index){
-                        @for(tags of article.tags; track $index){
-                            @if(tags.id == activeMenu()){
-                                <div class="text-black border rounded-lg shadow-lg px-2 py-4">
-                                    <h3 class="text-black text-xl">{{article.title}}</h3>
-                                    <p class="text-black">{{article.preview}}</p>
-
-                                    <a [routerLink]="['article', 1]" class="text-black mt-2">Read More -></a>
-                                </div>
+            <div class="col-span-3 p-6">
+                <p class=" mb-4">
+                    <span class="text-blue-400 underline" (click)="redirectBreadCrumb()" >{{activeMenu()}}</span>
+                    <span class="text-black" *ngIf="activeArticle()"> / </span>
+                    <span class="text-blue-400 underline" *ngIf="activeArticle()">{{activeArticle()}}</span>
+                </p>
+                @if(currentRoute == '/help'){
+                    <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4">
+                        @for(article of articles; track $index){
+                            @for(tags of article.tags; track $index){
+                                @if(tags.id == activeMenuId()){
+                                    <div class="text-black border rounded-lg shadow-lg px-2 py-4">
+                                        <h3 class="text-black text-xl">{{article.title}}</h3>
+                                        <p class="text-black">{{article.preview}}</p>
+    
+                                        <a [routerLink]="['article', article.id ]" (click)="activeArticle.set(article.title)" class="text-black mt-2">Read More -></a>
+                                    </div>
+                                }
                             }
                         }
-                    }
-                </div>
-            </div>
-            <div>
-                <router-outlet></router-outlet>
+                    </div>
+                }@else{
+                    <div>
+                        <router-outlet></router-outlet>
+                    </div>
+                }
             </div>
         </div>
     </div>
