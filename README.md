@@ -1,4 +1,8 @@
-# MyFirstAngularApp
+# Angular - Landing Page
+
+This project involves creating a dynamic and visually appealing landing page for a Software as a Service (SaaS) tool. The landing page will be developed using Angular, a robust framework for building responsive and high-performance web applications.
+
+# Version
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 
@@ -25,3 +29,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Technologies Used
+
+Angular,
+Tailwind CSS
+
+## Lessons Learned
+
+Learning Angular from scratch has been rewarding, teaching me the power of its component-based architecture, two-way data binding, and tools like the CLI for efficient development. I gained skills in routing, forms, RxJS for asynchronous data, and performance optimizations like lazy loading. Testing with Angular’s tools underscored the importance of reliable, maintainable code, making it easier to build dynamic, scalable applications.
