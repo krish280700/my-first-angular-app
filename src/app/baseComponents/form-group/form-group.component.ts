@@ -22,6 +22,12 @@ export class FormGroupComponent {
 	@Input() inputDatas!:input
 
 	onSubmit(form: NgForm) {
+		let formValue = form.form.value
 		console.log(form)
+		if(formValue.name && formValue.mail )
+			alert(`Thank you for submitting contact form. We'll reach you soon ${formValue.name}`)
+		else{
+			alert(`Please fill out the form`)
+		}
 	  }
 }

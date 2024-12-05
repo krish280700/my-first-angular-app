@@ -15,9 +15,9 @@
             </div>
             <div class="col-span-3 p-6">
                 <p class=" mb-4">
-                    <span class="text-blue-400 underline" (click)="redirectBreadCrumb()" >{{activeMenu()}}</span>
+                    <span class="text-blue-400 underline cursor-pointer" (click)="redirectBreadCrumb()" >{{activeMenu()}}</span>
                     <span class="text-black" *ngIf="activeArticle()"> / </span>
-                    <span class="text-blue-400 underline" *ngIf="activeArticle()">{{activeArticle()}}</span>
+                    <span class="text-blue-400 underline cursor-pointer" *ngIf="activeArticle()">{{activeArticle()}}</span>
                 </p>
                 @if(currentRoute == '/help'){
                     <div class="grid md:grid-cols-2  lg:grid-cols-3 gap-4">
@@ -28,7 +28,7 @@
                                         <h3 class="text-black text-xl">{{article.title}}</h3>
                                         <p class="text-black">{{article.preview}}</p>
     
-                                        <a [routerLink]="['article', article.id ]" (click)="activeArticle.set(article.title)" class="text-black mt-2">Read More -></a>
+                                        <a [routerLink]="['article', article.id ]" (click)="activeArticle.set(article.title)" class="text-black mt-4 cursor-pointer">Read More -></a>
                                     </div>
                                 }
                             }
