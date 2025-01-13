@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroupComponent } from '../../baseComponents/form-group/form-group.component';
-import { inputFields } from '../../mock/header';
+import { inputFields } from '../../mock/mock';
 
 @Component({
   selector: 'app-contact',

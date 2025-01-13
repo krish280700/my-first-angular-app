@@ -1,6 +1,6 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
-import { helpArticlesTag, articles } from '../../mock/header';
+import { helpArticlesTag, articles } from '../../mock/mock';
 import { RouterLink, RouterOutlet, ActivatedRoute, Route, Router, ActivationEnd} from "@angular/router";
 import { filter, map } from 'rxjs';
 

@@ -1,6 +1,6 @@
 import { Component,signal } from '@angular/core';
 
-import { pricingOptions, testimonials, pricingFAQ } from '../../mock/header';
+import { pricingOptions, testimonials, pricingFAQ } from '../../mock/mock';
 
 import { ButtonComponent } from '../../baseComponents/button/button.component';
 import { AccordionComponent } from '../../component/accordion/accordion.component';

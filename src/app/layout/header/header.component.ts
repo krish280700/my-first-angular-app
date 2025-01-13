@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, signal, ViewChild } from "@angular/core";
-import { menuData } from "../../mock/header";
+import { menuData } from "../../mock/mock";
 import { ButtonComponent } from "../../baseComponents/button/button.component";
 import { RouterLink } from "@angular/router";
 @Component({
@@ -12,7 +12,7 @@ import { RouterLink } from "@angular/router";
 
 export class HeaderComponent{
     isProductHover = signal<boolean>(false)
-    isSticky = signal<boolean>(true)
+    isSticky = signal<boolean>(false)
     isHamBurgerVisible = window.innerWidth < 1020
     isToggle = signal<boolean>(false)
     activetab = signal<string>('product')
