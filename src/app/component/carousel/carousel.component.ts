@@ -14,9 +14,10 @@ export class CarouselComponent {
 	slideConfig = {
 		"slidesToShow": 1,
 		"slidesToScroll": 1,
-		"dots": true,
+		"dots": false,
 		"autoplay": true,
-		"autoplaySpeed": 5000,
-		"infinite": true
+		"autoplaySpeed": 3000,
+		"infinite": true,
+		"arrows": false
 	};
 }

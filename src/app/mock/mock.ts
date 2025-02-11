@@ -1,31 +1,64 @@
 export const menuData = [
     {
-        id: 1,
+        id: 'nav1',
         menu: 'product',
         label: 'Product',
         subMenu:[],
         isVisible: true
     },
     {
-        id: 1,
+        id: 'nav2',
         menu: 'pricing',
         label: 'Pricing',
         isVisible: true
     },
     {
-        id: 1,
+        id: 'nav3',
         menu: 'help',
         label: 'Help Center',
         isVisible: true
     },
     {
-        id: 1,
+        id: 'nav4',
         menu: 'contact',
         label: 'Contact',
         isVisible: true
     },
 ]
 
+
+export const bannerContent = [
+    {
+        id: 'banner1',
+        for: 'Small Business',
+        sol: 'Need scalable, budget-friendly solutions to manage interactions.'
+    },
+    {
+        id: 'banner2',
+        for: 'Large Enterprises',
+        sol: 'Require robust systems for efficiency and cost reduction'
+    },
+    {
+        id: 'banner3',
+        for: 'Seasonal Industries',
+        sol: 'Seek flexibility to manage fluctuating demand.'
+    },
+    {
+        id: 'banner4',
+        for: 'Digital Transitioners',
+        sol: 'Need integrated solutions for omnichannel service'
+    },
+    {
+        id: 'banner5',
+        for: 'Knowledge-intensive Industries',
+        sol: 'Require customized, domain-specific AI solutions.'
+    },
+    {
+        id: 'banner6',
+        for: 'Global Corporations',
+        sol: 'Demand multilingual and culturally adaptive platforms.'
+    },
+]
 export const pricingOptions = [
     {
         type: "Starter",

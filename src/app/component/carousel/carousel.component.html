@@ -15,6 +15,18 @@
                 </div>
             }
         }
+        @else if(section() == "banner"){
+            @for (slide of content(); track slide.id) {
+                <div ngxSlickItem class="slide">
+                    <div class=" flex flex-col justify-center h-full" data-carousel-item>
+                        <!-- <h3 class="text-2xl font-bold underline">{{slide.header}}</h3> -->
+                        <div class="mt-5">
+                            <p class="text-lg"><span class="font-bold">{{slide.for}}</span> - {{slide.sol}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
         @else if(section() == "testimonials"){
             @for (slide of content(); track slide.name) {
                 <div ngxSlickItem class="slide">

@@ -1,26 +1,26 @@
 <main class="px-10 mx-auto max-w-7xl">
     <section class="hero-section mt-10">
-        <div class="flex flex-col  items-center justify-center md:grid grid-cols-2">
-            <div class="hero-container flex flex-col justify-center items-center md:block pr-10`">
-                <div class="hero-header ">
-                    <p class="leading-10 text-center md:text-left">
-                        <span class="text-4xl lg:text-6xl font-serif">An end-to-end AI-powered</span><br/>
-                        <span class="text-3xl lg:text-3xl font-serif">customer service automation platform</span>
-                        <span class="text-2xl block"> Manage Emails & DMs in One Place</span>
-                        <span class="text-xl">with AI-Powered Responses</span>
-                    </p>
+        <div class="mt-12">
+            <h3 class="text-4xl lg:text-5xl font-serif text-center">An End-to-End AI-powered Customer service automation platform</h3>
+            <div class="flex  items-center justify-center md:grid grid-cols-2">
+                <div class="hero-container flex flex-col justify-center items-center md:block pr-10`">
+                    <div class="hero-header ">
+                        <p class="leading-10 text-center md:text-left">
+                            <app-carousel section="banner" [content]="bannerContent"></app-carousel>
+                        </p>
+                    </div>
+                    <p class="hero-content mt-2 lg:pr-5">Streamline customer interactions across platforms with AIFS – your unified inbox with AI-powered efficiency.</p>
+                    <div class="hero-action flex flex-col items-center md:flex-row space-x-4 mt-4">
+                        <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
+                        <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient mt-2 md:mt-0'}"></app-button>
+                    </div>
                 </div>
-                <p class="hero-content mt-10 lg:pr-5">Streamline customer interactions across platforms with AIFS – your unified inbox with AI-powered efficiency.</p>
-                <div class="hero-action flex flex-col items-center md:flex-row space-x-4 mt-4">
-                    <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
-                    <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient mt-2 md:mt-0'}"></app-button>
-                </div>
-            </div>
-            <div class="support-hero-content">
-                <div class="transition-all">
-                    <figure>
-                        <img src="assets/images/Untitled.png" />
-                    </figure>
+                <div class="support-hero-content">
+                    <div class="transition-all">
+                        <figure>
+                            <img src="assets/images/Untitled.png" />
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
