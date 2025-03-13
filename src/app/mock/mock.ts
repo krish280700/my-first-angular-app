@@ -121,6 +121,56 @@ export const pricingFAQ = [
     },
 ]
 
+export const differentiation = [
+    {
+        id: 1,
+        isOpen: true,
+        ques: "Business-Specific Intelligence",
+        ans: "Not a generic ChatGPT or fragmented CoPilot solution, but a system precisely tuned to your unique business context."
+    },
+    {
+        id: 2,
+        isOpen: false,
+        ques: "Low-Cost Customization",
+        ans: "Seamlessly adapts to your business data and rules without the prohibitive expenses typically associated with custom AI implementations."
+    },
+    {
+        id: 3,
+        isOpen: false,
+        ques: "Complete Data Isolation",
+        ans: "Operates within your own secure environment with full isolation, ensuring your sensitive information never leaves your control."
+    },
+    {
+        id: 4,
+        isOpen: false,
+        ques: "Enterprise-Grade Security",
+        ans: "Deployment runs entirely within your infrastructure, eliminating third-party data exposure risks."
+    },
+    {
+        id: 5,
+        isOpen: false,
+        ques: "Operational Autonomy",
+        ans: "Functions independently within your environment without reliance on external AI providers for day-to-day operations."
+    },
+    {
+        id: 6,
+        isOpen: false,
+        ques: "Comprehensive Integration Capability",
+        ans: "Connects with your external systems through purpose-built agents and tools, creating a unified automation ecosystem."
+    },
+    {
+        id: 7,
+        isOpen: false,
+        ques: "End-to-End Solution Architecture",
+        ans: "Delivers a complete solution rather than disconnected AI assistants that require manual bridging."
+    },
+    {
+        id: 8,
+        isOpen: false,
+        ques: "Data Sovereignty Assurance",
+        ans: "Guarantees your business information remains exclusively yours without feeding external AI models."
+    },
+]
 export const testimonials = [
     {
         name: "krish",
@@ -288,9 +338,9 @@ export const articles = [
 
 export const problemContent = [
     {
-        header: 'Scattered Conversations',
-        content1: 'Emails, social media DMs, live chat, and messaging apps like WhatsApp and Messenger have become the go-to channels for customers. The problem? Each platform is its own island.',
-        content2: 'You have to constantly switch between apps to check for new inquiries, often missing important messages or delaying your responses. This leads to scattered conversations, frustration, and ultimately a poor customer experience.'
+        header: 'Multi-Channel Interception',
+        content1: 'Captures customer communications across all entry points at their origin.',
+        content2: ''
     },
     {
         header: 'Time-Consuming Manual Responses',
@@ -310,21 +360,63 @@ export const problemContent = [
 
 export const solutionContent = [
     {
-        header: 'One Centralized Inbox for All Platforms',
+        header: 'Multi-Channel Interception',
         body:[
-            'No more jumping between apps or missing important messages. Omnichat integrates with your email, social media DMs, and messaging platforms like WhatsApp, Facebook, Instagram, and more.'
+            'Captures customer communications across all entry points at their origin.'
         ]
     },
     {
-        header: 'AI-Powered Smart Replies',
+        header: 'AI-Powered Intelligence Extraction',
         body:[
-            'Omnichat’s AI doesn’t just help you organize your messages—it assists you in responding to them. Our AI generates smart, context-aware responses, saving you from repetitive typing.'
+            'Analyzes communications to identify key information and insights.'
         ]
     },
     {
-        header: 'Automated Responses for Repetitive Inquiries',
+        header: 'Business Rule Integration',
         body:[
-            'Set up automated replies for frequently asked questions, such as business hours, return policies, or shipping information. The AI can instantly send accurate answers to routine queries, allowing you to focus on more critical tasks that require personal attention.'
+            'Applies your specific business rules to properly categorize and organize communications.'
+        ]
+    },
+    {
+        header: 'Smart Prioritization',
+        body:[
+            'Organizes communications for maximum efficiency and handling effectiveness.'
+        ]
+    },
+    {
+        header: 'Automated Response Generation',
+        body:[
+            'Creates responses using your internal knowledge base combined with relevant external domain-specific information.'
+        ]
+    },
+    {
+        header: 'Comprehensive Answer Delivery',
+        body:[
+            'Provides customers with accurate, complete responses to their queries.'
+        ]
+    },
+    {
+        header: 'End-to-End Visibility',
+        body:[
+            'Offers complete transparency into the entire customer journey.'
+        ]
+    },
+    {
+        header: 'Journey Tracking',
+        body:[
+            'Monitors and reports on customer interactions from first contact to resolution.'
+        ]
+    },
+    {
+        header: 'Workflow Optimization',
+        body:[
+            'Streamlines communication handling processes to save time and resources.'
+        ]
+    },
+    {
+        header: 'Intelligent Scaling',
+        body:[
+            'Leverages automation to dramatically increase throughput capacity without proportional resource expansion, enabling seamless growth handling.'
         ]
     },
 ]

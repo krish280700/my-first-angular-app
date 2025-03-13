@@ -1,15 +1,20 @@
 <main class="px-10 mx-auto max-w-7xl">
     <section class="hero-section mt-10">
-        <div class="mt-12">
-            <h3 class="text-4xl lg:text-5xl font-serif text-center">An End-to-End AI-powered Customer service automation platform</h3>
+        <div class="mt-20">
             <div class="flex  items-center justify-center md:grid grid-cols-2">
-                <div class="hero-container flex flex-col justify-center items-center md:block pr-10`">
-                    <div class="hero-header ">
-                        <p class="leading-10 text-center md:text-left">
-                            <app-carousel section="banner" [content]="bannerContent"></app-carousel>
-                        </p>
+                <div class="hero-container flex flex-col justify-center items-center md:block pr-5">
+                    <h3 class="text-4xl lg:text-5xl font-serif">One Platform, Full Automation:</h3>
+                    <h4 class="text-3xl lg:text-4xl font-serif">AI That Sees the Entire Journey</h4>
+                    <div class="hero-header mt-10">
+                        <ul class="leading-10 mt-4 text-center md:text-left list-disc">
+                            <li class="text-lg"><span class="font-bold">Small Business</span> - Need scalable, budget-friendly solutions to manage interactions.</li>
+                            <li class="text-lg"><span class="font-bold">Large Enterprises</span> - Require robust systems for efficiency and cost reduction.</li>
+                            <li class="text-lg"><span class="font-bold">Seasonal Industries</span> - Seek flexibility to manage fluctuating demand.</li>
+                            <li class="text-lg"><span class="font-bold">Knowledge-intensive</span> - Require customized, domain-specific AI solutions.</li>
+                            <li class="text-lg"><span class="font-bold">Global Corporations</span> - Demand multilingual and culturally adaptive platforms.</li>
+                        </ul>
                     </div>
-                    <p class="hero-content mt-2 lg:pr-5">Streamline customer interactions across platforms with AIFS – your unified inbox with AI-powered efficiency.</p>
+                    <p class="hero-content mt-10 lg:pr-5">Streamline email management with AIFS – your AI-powered solution to handle overwhelming queries with efficiency and precision.</p>
                     <div class="hero-action flex flex-col items-center md:flex-row space-x-4 mt-4">
                         <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
                         <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient mt-2 md:mt-0'}"></app-button>
@@ -23,16 +28,28 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="flex  items-center justify-center md:grid grid-cols-2">
+            </div> -->
         </div>
     </section>
     
     <section class="problem-statement mt-12 md:mt-24">
         <div class="flex flex-col justify-center items-center ">
-            <h3 class="text-xl md:text-3xl font-semibold text-center">Your Customers Are Everywhere<br>Your Responses Aren’t</h3>
+            <h3 class="text-xl md:text-3xl font-semibold text-center">Our AI solution for Customer Engagement</h3>
             <div class="h-1 w-20 mt-2 bg-black"></div>
         </div>
-        <div class="lg:mt-16">
-            <p class="text-xl md:text-3xl font-bold text-center md:leading-[3rem] opacity-70">As a business owner, managing customer communication is crucial for maintaining relationships and driving growth. But with the rise of digital platforms, handling messages across various channels has become overwhelming.</p>
+        <p class="text-xl md:text-3xl font-bold text-center md:leading-[3rem] opacity-70 lg:mt-16 mt-8">Tame the Email Tsunami with Intelligent Prioritization and knowledge driven grounded response.</p>
+        <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
+            @for(solution of solutionContent; track solution.header){
+                <app-card [cardData]="solution"></app-card>
+            }
+        </div>
+        <!-- <div class="flex flex-col justify-center items-center ">
+            <h3 class="text-xl md:text-3xl font-semibold text-center">Our AI solution for Customer Engagement</h3>
+            <div class="h-1 w-20 mt-2 bg-black"></div>
+        </div>
+        <div class="lg:mt-16 mt-8">
+            <p class="text-xl md:text-3xl font-bold text-center md:leading-[3rem] opacity-70">Tame the Email Tsunami with Intelligent Prioritization and knowledge driven grounded response.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 items-center mt-20 ">
                 <div class="lg:w-11/12">
                     <app-carousel section="problem" [content]="problemContent"></app-carousel>
@@ -43,19 +60,17 @@
                     </figure>
                 </div>
             </div>
-        </div>
+        </div> -->
     
     </section>
     
     <section class="solution-statement mt-16 md:mt-24">
         <div class="flex flex-col justify-center items-center ">
-            <h3 class="text-center text-xl md:text-3xl font-semibold">AIFS: All Your Communications<br> in One Place</h3>
+            <h3 class="text-center text-xl md:text-3xl font-semibold">Our Differentiated Value Proposition</h3>
             <div class="h-1 w-20 mt-2 bg-black"></div>
         </div>
-        <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
-            @for(solution of solutionContent; track solution.header){
-                <app-card [cardData]="solution"></app-card>
-            }
+        <div class="mt-10 border-transparent rounded-2xl shadow-2xl p-6">
+            <app-accordion [accordionData]="differentiation"></app-accordion>
         </div>
     
     </section>
