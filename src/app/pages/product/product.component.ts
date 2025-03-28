@@ -3,7 +3,7 @@ import { CardComponent } from '../../component/card/card.component';
 import { ButtonComponent } from "../../baseComponents/button/button.component";
 import { CarouselComponent } from '../../component/carousel/carousel.component';
 import { AccordionComponent } from '../../component/accordion/accordion.component';
-import { testimonials, problemContent, solutionContent, bannerContent, differentiation } from '../../mock/mock';
+import { testimonials, problemContent, solutionContent, bannerContent, differentiation, transformativeContent } from '../../mock/mock';
 @Component({
 	selector: 'app-product',
 	standalone: true,
@@ -18,4 +18,5 @@ export class ProductComponent {
 	solutionContent = solutionContent
 	bannerContent = bannerContent
 	differentiation = differentiation
+	transformativeContent = transformativeContent
 }

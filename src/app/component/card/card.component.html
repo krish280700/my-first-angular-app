@@ -1,10 +1,19 @@
 <div class="container animate-fadein h-full">
     <div class="border-2 border-transparent shadow-xl h-full rounded-lg p-10 min-w-10 max-w-[70rem] ">
         <div class="card-header">
-            <h3 class="text-xl font-bold italic">{{cardData()?.header}}</h3>
+            <h3 class="text-xl font-bold italic">{{cardData?.header}}</h3>
         </div>
         <div class="card-body py-5">
-            <p>{{cardData()?.body}}</p>
+            @if( bodyType() == 'text')
+                {<p>{{cardData?.body}}</p>}
+            @else if(bodyType() == 'list')
+                {<ul class="list-disc list-inside">
+                    @for(item of cardData?.body; track item)
+                        {<li>{{item}}</li>}
+                </ul>
+            }
+                
+                
         </div>
         <div class="card-footer">
             

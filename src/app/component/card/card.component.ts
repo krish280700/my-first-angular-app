@@ -1,8 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 
 interface Card{
   header?: string,
-  body: string | any[],
+  body: string | string[],
   footer?: string | any[],
 }
 
@@ -14,5 +14,11 @@ interface Card{
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  cardData = input<Card>()
+  @Input() cardData?: Card;
+  bodyType = signal('text');
+
+  ngOnInit() {
+    this.bodyType.set(Array.isArray(this.cardData?.body) ? 'list' : 'text');
+  }
+  // console.log(this.bodyType, this.cardData?.body)
 }

@@ -59,6 +59,24 @@ export const bannerContent = [
         sol: 'Demand multilingual and culturally adaptive platforms.'
     },
 ]
+
+export const transformativeContent = [
+    {
+        id: 'transform1',
+        header: 'Productivity Amplification',
+        body: ['Reduce response times by up to 70%', 'Automate complex communication workflows', 'Standardize knowledge access across organization' ]
+    },
+    {
+        id: 'transform2',
+        header: 'Intelligent Routing',
+        body: [' Precision assignment to right specialists', 'Context-aware communication handling', 'Consistent quality across all interactions' ]
+    },
+    {
+        id: 'transform3',
+        header: 'Knowledge Democratization',
+        body: ['Level playing field for all knowledge workers', 'Capture and leverage collective enterprise intelligence', 'Eliminate knowledge silos' ]
+    },
+]
 export const pricingOptions = [
     {
         type: "Starter",

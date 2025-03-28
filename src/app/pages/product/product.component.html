@@ -2,19 +2,20 @@
     <section class="hero-section mt-10">
         <div class="mt-20">
             <div class="flex  items-center justify-center md:grid grid-cols-2">
-                <div class="hero-container flex flex-col justify-center items-center md:block pr-5">
-                    <h3 class="text-4xl lg:text-5xl font-serif">One Platform, Full Automation:</h3>
+                <div class="hero-container flex flex-col justify-center animate-fadein items-center md:block pr-5">
+                    <h3 class="text-5xl lg:text-7xl font-serif">One Platform, Full Automation:</h3>
                     <h4 class="text-3xl lg:text-4xl font-serif">AI That Sees the Entire Journey</h4>
+                    <h4 class="text-2xl lg:text-3xl font-serif pt-4"> Revolutionize Customer Engagement with AI-Powered Precision</h4>
                     <div class="hero-header mt-10">
-                        <ul class="leading-10 mt-4 text-center md:text-left list-disc">
+                        <!-- <ul class="leading-10 mt-4 text-center md:text-left list-disc">
                             <li class="text-lg"><span class="font-bold">Small Business</span> - Need scalable, budget-friendly solutions to manage interactions.</li>
                             <li class="text-lg"><span class="font-bold">Large Enterprises</span> - Require robust systems for efficiency and cost reduction.</li>
                             <li class="text-lg"><span class="font-bold">Seasonal Industries</span> - Seek flexibility to manage fluctuating demand.</li>
                             <li class="text-lg"><span class="font-bold">Knowledge-intensive</span> - Require customized, domain-specific AI solutions.</li>
                             <li class="text-lg"><span class="font-bold">Global Corporations</span> - Demand multilingual and culturally adaptive platforms.</li>
-                        </ul>
+                        </ul> -->
                     </div>
-                    <p class="hero-content mt-10 lg:pr-5">Streamline email management with AIFS – your AI-powered solution to handle overwhelming queries with efficiency and precision.</p>
+                    <p class="hero-content mt-10 lg:pr-5">Our AI solution for Customer Engagement – your AI-powered solution to handle overwhelming queries with efficiency and precision.</p>
                     <div class="hero-action flex flex-col items-center md:flex-row space-x-4 mt-4">
                         <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
                         <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient mt-2 md:mt-0'}"></app-button>
@@ -39,29 +40,67 @@
             <div class="h-1 w-20 mt-2 bg-black"></div>
         </div>
         <p class="text-xl md:text-3xl font-bold text-center md:leading-[3rem] opacity-70 lg:mt-16 mt-8">Tame the Email Tsunami with Intelligent Prioritization and knowledge driven grounded response.</p>
-        <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
-            @for(solution of solutionContent; track solution.header){
-                <app-card [cardData]="solution"></app-card>
-            }
-        </div>
-        <!-- <div class="flex flex-col justify-center items-center ">
-            <h3 class="text-xl md:text-3xl font-semibold text-center">Our AI solution for Customer Engagement</h3>
-            <div class="h-1 w-20 mt-2 bg-black"></div>
-        </div>
-        <div class="lg:mt-16 mt-8">
-            <p class="text-xl md:text-3xl font-bold text-center md:leading-[3rem] opacity-70">Tame the Email Tsunami with Intelligent Prioritization and knowledge driven grounded response.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center mt-20 ">
-                <div class="lg:w-11/12">
-                    <app-carousel section="problem" [content]="problemContent"></app-carousel>
-                </div>
-                <div>
-                    <figure>
-                        <img src="assets/images/problem.png" />
-                    </figure>
+
+        <div class="grid gap-6 lg:grid-cols-2 lg:mt-16 mt-6 animate-slideinup   ">
+            <div class="border rounded-lg shadow-2xl p-6">
+                <h3 class="font-bold text-2xl italic text-red-800">Why Traditional Customer Service Falls Short</h3>
+                <div class="h-1 w-20 mt-1 bg-white"></div>
+
+                <ul class="list-disc list-inside space-y-2 mt-10">
+                    <li> Inability to sort through high volume of customer queries to identify, prioritize and respond in a timely manner</li>
+                    <li>Slow and inconsistent: Customer frustration for not delivering timely response</li>
+                    <li> Prone to human error: Response not grounded on latest company knwoledge and verifed knowledge sources</li>
+                    <li>Inefficient in routing inquiries: Inability to apply business rules</li>
+                    <li>Limited by individual knowledge gaps - Response dependant on agent experience</li>
+                </ul>
+            </div>
+            <div class="border rounded-lg shadow-2xl p-6">
+                <h3 class="font-bold text-2xl italic text-[#23ff00]">Intelligent Customer Interaction Platform</h3>
+                <div class="h-1 w-20 mt-1 bg-white"></div>
+
+                <ul class="list-disc list-inside space-y-2 mt-6">
+                    <li><span class="font-bold"> AI-Powered Traffic Interception</span>
+                        <ul class="list-decimal pl-12 list-inside space-y-1">
+                            <li> Advanced AI analyzes incoming communications</li>
+                            <li> Extracts critical insights: topics, entities, sentiment</li>
+                            <li> Intelligent categorization and routing</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-bold">  Enterprise Knowledge Integration</span>
+                        <ul class="list-decimal pl-12 list-inside space-y-1">
+                            <li> Comprehensive knowledge capture from web and internal documents</li>
+                            <li> Grounded, accurate response generation</li>
+                            <li> Seamless integration with existing systems (ERP, CRM)</li>
+                        </ul>
+                    </li>
+                    <li><span class="font-bold">  Intelligent Response Orchestration</span>
+                        <ul class="list-decimal pl-12 list-inside space-y-1">
+                            <li> Multi-source information gathering</li>
+                            <li> Contextual and precise response crafting</li>
+                            <li> Agent Assisted workflow automation</li>
+                            <li> Human review and approval workflow</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hero-action flex flex-col justify-center items-center md:flex-row space-x-4 mt-8">
+                    <app-button [btnData]="{id:2, name:'Get Started for Free', className:'btn-transparent-dark'}"></app-button>
+                    <app-button [btnData]="{id:2, name:'Book Demo', className:'btn-gradient mt-2 md:mt-0'}"></app-button>
                 </div>
             </div>
-        </div> -->
-    
+
+        </div>
+    </section>
+
+    <section class="problem-statement mt-12 md:mt-24">
+        <div class="flex flex-col justify-center items-center ">
+            <h3 class="text-xl md:text-3xl font-semibold text-center">Transformative Benefits</h3>
+            <div class="h-1 w-20 mt-2 bg-black"></div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-6 lg:mt-16">
+            @for(transformative of transformativeContent; track transformative.header){
+                <app-card [cardData]="transformative"></app-card>
+            }
+        </div>
     </section>
     
     <section class="solution-statement mt-16 md:mt-24">

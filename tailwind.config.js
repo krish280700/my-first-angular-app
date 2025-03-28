@@ -70,7 +70,7 @@ module.exports = {
 
 		},
 		animation: {
-			fadein: 'fade-in 2s ease-in-out 0.5s 1',
+			fadein: 'fade-in 2s ease-in-out 0s 1',
 			fadeoutleft: 'fade-out-left 2s ease-in-out 1',
 			fadeinright: 'fade-in-right 2s ease-in-out 1',
 			slidedown: 'slide-down 2s ease-in-out 1',
